@@ -17,10 +17,7 @@ func Average(values []int) float64 {
 	/* Hinweis:
 	   Verwenden Sie die Funktion Sum aus dem Paket intlists.
 	*/
-	// tag::solution[]
 	return float64(intlists.Sum(values)) / float64(len(values))
-	// end::solution[]
-	// taskreturn: 0.0
 }
 
 // Median erwartet eine Liste mit ganzzahligen Werten.
@@ -39,12 +36,10 @@ func Median(values []int) int {
 	   Bestimmen Sie dann das mittlere Element, oder, falls die Liste eine gerade Anzahl von Elementen hat,
 	   den Durchschnitt der beiden mittleren Elemente.
 	*/
-	// tag::solution[]
 	slices.Sort(sorted)
 	if len(sorted)%2 == 0 {
 		return (sorted[len(sorted)/2-1] + sorted[len(sorted)/2]) / 2
 	}
-	// end::solution[]
 	return sorted[len(sorted)/2]
 }
 
