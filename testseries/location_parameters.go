@@ -7,9 +7,6 @@ func Average(values []int) float64 {
 	if len(values) == 0 {
 		return 0.0
 	}
-	/* Hinweis:
-	   Verwenden Sie die Funktion Sum aus dem Paket intlists.
-	*/
 	// TODO
 	return 0.0
 }
@@ -24,12 +21,6 @@ func Median(values []int) int {
 	sorted := make([]int, len(values))
 	copy(sorted, values)
 
-	/* Hinweis:
-	   Verwenden Sie die Funktion sort aus dem Paket slices, um die Liste zu sortieren.
-	   Die beiden Anweisungen oben kopieren Sie die Liste vorher, damit die ursprüngliche Liste nicht verändert wird.
-	   Bestimmen Sie dann das mittlere Element, oder, falls die Liste eine gerade Anzahl von Elementen hat,
-	   den Durchschnitt der beiden mittleren Elemente.
-	*/
 	// TODO
 	return sorted[len(sorted)/2]
 }
@@ -43,12 +34,6 @@ func Mode(values []int) int {
 		return 0
 	}
 	maxpos := 0
-	/* Hinweis:
-	   Bestimmen Sie den kleinsten Wert, der in der Liste vorkommt.
-	   Bestimmen Sie außerdem die Liste der absoluten Häufigkeiten und deren Maximum.
-	   Dies ist der Wert, der am häufigsten vorkommt.
-	   Suchen Sie dann nach dessen Position in der Liste der absoluten Häufigkeiten.
-	*/
 	// TODO
 	return maxpos
 }
@@ -63,10 +48,6 @@ func GeometricMean(values []int) float64 {
 	if len(values) == 0 {
 		return 0.0
 	}
-	/* Hinweis:
-	   Verwenden Sie die Funktion Product aus dem Paket intlists.
-	   Verwenden Sie die Funktion Pow aus dem Paket math.
-	*/
 	// TODO
 	return 0.0
 }
@@ -81,11 +62,6 @@ func HarmonicMean(values []int) float64 {
 	if len(values) == 0 {
 		return 0.0
 	}
-
-	/* Hinweis:
-	   Bestimmen Sie die Summe der Kehrwerte der Werte.
-	   Teilen Sie die Anzahl der Werte durch diese Summe.
-	*/
 	// TODO
 	return 0.0
 }

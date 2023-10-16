@@ -13,10 +13,6 @@ func RollSingleDieOnce() int {
 // Die Funktion erwartet die Anzahl der Würfel und liefert die Summe der Würfelaugen.
 func RollMultipleDiceOnce(d int) int {
 	sum := 0
-	/* Hinweis:
-	   Schreiben Sie eine Schleife, die d mal die Funktion RollSingleDieOnce
-	   aufruft und die Ergebnisse aufsummiert.
-	*/
 	// TODO
 	return sum
 }
@@ -26,10 +22,6 @@ func RollMultipleDiceOnce(d int) int {
 // Die Funktion würfelt n mal und liefert eine Liste mit den Ergebnissen.
 func RollMany(d, n int) []int {
 	rollResults := make([]int, n)
-	/* Hinweis:
-	   Schreiben Sie eine Schleife, die n mal die Funktion RollMultipleDiceOnce
-	   aufruft und die Ergebnisse in der Liste rollResults speichert.
-	*/
 	// TODO
 	return rollResults
 }
