@@ -8,11 +8,7 @@ func Min(values []int) int {
 	   Verwenden Sie eine for-Schleife, um das Minimum zu berechnen.
 	   Jedes Mal, wenn Sie ein neues Minimum finden, speichern Sie es in der Variablen min.
 	*/
-	for _, v := range values {
-		if v < min {
-			min = v
-		}
-	}
+	// TODO
 	return min
 }
 
@@ -23,11 +19,7 @@ func Max(values []int) int {
 	/* Hinweis:
 	   Gehen Sie analog zu Min vor.
 	*/
-	for _, v := range values {
-		if v > max {
-			max = v
-		}
-	}
+	// TODO
 	return max
 }
 
@@ -42,10 +34,7 @@ func ValueRange(values []int) []int {
 	   Fügen Sie dann in einer Schleife alle Zahlen zwischen
 	   Minimum und Maximum zu result hinzu.
 	*/
-	min, max := Min(values), Max(values)
-	for i := min; i <= max; i++ {
-		result = append(result, i)
-	}
+	// TODO
 	return result
 
 }
@@ -58,9 +47,7 @@ func Sum(values []int) int {
 	   Verwenden Sie eine for-Schleife, um die Summe zu berechnen.
 	   Addieren Sie in jedem Schleifendurchlauf den aktuellen Wert zur Summe.
 	*/
-	for _, v := range values {
-		sum += v
-	}
+	// TODO
 	return sum
 }
 
@@ -71,8 +58,6 @@ func Product(values []int) int {
 	/* Hinweis:
 	   Gehen Sie analog zu Sum vor.
 	*/
-	for _, v := range values {
-		product *= v
-	}
+	// TODO
 	return product
 }

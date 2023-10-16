@@ -1,11 +1,5 @@
 package testseries
 
-import (
-	"fmt"
-
-	"github.com/wwi23ama-prog/aufgaben_datenanalyse/intlists"
-)
-
 // PrintDistribution erwartet eine Liste mit Ergebnissen einer Integer-Messreihe.
 // Die Funktion gibt die absolute und relative Häufigkeit sowie
 // den Wert der empirischen Verteilungsfunktion für jede Zahl aus.
@@ -19,16 +13,7 @@ func PrintDistribution(values []int) {
 	   die über die Werte der Messreihe iteriert.
 	   Beachten Sie dabei die Abstände zwischen den Spalten.
 	*/
-	valrange := intlists.ValueRange(values)
-	absolute := AbsoluteFrequencies(values)
-	relative := RelativeFrequencies(absolute)
-	emp := Distribution(values)
-
-	fmt.Println("Wert   Abs.   Rel.     Vert.")
-
-	for i, v := range valrange {
-		fmt.Printf("%d       %d     %.2f     %.2f\n", v, absolute[i], relative[i], emp[i])
-	}
+	// TODO
 }
 
 // PrintHistogram erwartet eine Liste mit Ergebnissen einer Integer-Messreihe.
@@ -42,14 +27,5 @@ func PrintHistogram(values []int) {
 	   über den Wertebereich iterieren und in jeder Iteration
 	   die entsprechende Anzahl an Sternchen ausgeben.
 	*/
-	valrange := intlists.ValueRange(values)
-	absolute := AbsoluteFrequencies(values)
-
-	for i, v := range valrange {
-		fmt.Printf("%d: |", v)
-		for j := 0; j < absolute[i]; j++ {
-			fmt.Print("*")
-		}
-		fmt.Println()
-	}
+	// TODO
 }

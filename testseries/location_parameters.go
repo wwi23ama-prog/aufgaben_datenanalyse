@@ -1,12 +1,5 @@
 package testseries
 
-import (
-	"math"
-	"slices"
-
-	"github.com/wwi23ama-prog/aufgaben_datenanalyse/intlists"
-)
-
 // Average erwartet eine Liste mit ganzzahligen Werten.
 // Die Funktion liefert den Durchschnittswert.
 // Ist die Liste leer, wird 0.0 zurückgegeben.
@@ -17,10 +10,8 @@ func Average(values []int) float64 {
 	/* Hinweis:
 	   Verwenden Sie die Funktion Sum aus dem Paket intlists.
 	*/
-	// tag::solution[]
-	return float64(intlists.Sum(values)) / float64(len(values))
-	// end::solution[]
-	// taskreturn: 0.0
+	// TODO
+	return 0.0
 }
 
 // Median erwartet eine Liste mit ganzzahligen Werten.
@@ -39,12 +30,7 @@ func Median(values []int) int {
 	   Bestimmen Sie dann das mittlere Element, oder, falls die Liste eine gerade Anzahl von Elementen hat,
 	   den Durchschnitt der beiden mittleren Elemente.
 	*/
-	// tag::solution[]
-	slices.Sort(sorted)
-	if len(sorted)%2 == 0 {
-		return (sorted[len(sorted)/2-1] + sorted[len(sorted)/2]) / 2
-	}
-	// end::solution[]
+	// TODO
 	return sorted[len(sorted)/2]
 }
 
@@ -63,23 +49,7 @@ func Mode(values []int) int {
 	   Dies ist der Wert, der am häufigsten vorkommt.
 	   Suchen Sie dann nach dessen Position in der Liste der absoluten Häufigkeiten.
 	*/
-
-	// Bestimme den kleinsten Wert in der Liste der Werte.
-	minvalue := intlists.Min(values)
-
-	// Bestimme, wie oft der häufigste Wert vorkommt.
-	// Bestimme dazu die Liste der absoluten Häufigkeiten und deren Maximum.
-	freq := AbsoluteFrequencies(values)
-	max := intlists.Max(freq)
-
-	// Suche die Position dieses Wertes in der Liste der absoluten Häufigkeiten.
-	// Aus dieser Position kann der häufigste Wert bestimmt werden.
-	for i, f := range freq {
-		if f == max {
-			maxpos = i + minvalue
-			break
-		}
-	}
+	// TODO
 	return maxpos
 }
 
@@ -97,10 +67,8 @@ func GeometricMean(values []int) float64 {
 	   Verwenden Sie die Funktion Product aus dem Paket intlists.
 	   Verwenden Sie die Funktion Pow aus dem Paket math.
 	*/
-	product := float64(intlists.Product(values))
-	length := float64(len(values))
-
-	return math.Pow(product, 1.0/length)
+	// TODO
+	return 0.0
 }
 
 // HarmonicMean erwartet eine Liste mit ganzzahligen Werten.
@@ -118,10 +86,6 @@ func HarmonicMean(values []int) float64 {
 	   Bestimmen Sie die Summe der Kehrwerte der Werte.
 	   Teilen Sie die Anzahl der Werte durch diese Summe.
 	*/
-	sum := 0.0
-	for _, v := range values {
-		sum += 1.0 / float64(v)
-	}
-
-	return float64(len(values)) / sum
+	// TODO
+	return 0.0
 }

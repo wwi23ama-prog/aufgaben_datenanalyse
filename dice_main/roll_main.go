@@ -1,12 +1,5 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/wwi23ama-prog/aufgaben_datenanalyse/dice"
-	"github.com/wwi23ama-prog/aufgaben_datenanalyse/testseries"
-)
-
 // readUserInput fragt den Benutzer nach der Anzahl der Würfe und der Anzahl der Würfel.
 // Die Funktion liefert beide Werte zurück.
 func readUserInput() (int, int) {
@@ -17,17 +10,7 @@ func readUserInput() (int, int) {
 
 	   Speichern Sie die Eingaben in den Variablen n und d.
 	*/
-	fmt.Println("Würfelwurf-Simulator")
-	fmt.Println("====================")
-	fmt.Println()
-
-	fmt.Print("Wie oft soll gewürfelt werden? Bitte Zahl eingeben: ")
-	fmt.Scanln(&n)
-
-	fmt.Print("Wie viele Würfel sollen verwendet werden? Bitte Zahl eingeben: ")
-	fmt.Scanln(&d)
-
-	fmt.Println()
+	// TODO
 	return d, n
 }
 
@@ -37,19 +20,10 @@ func printDiceStatistics(rollResults []int) {
 	   Verwenden Sie die Funktionen PrintDistribution und PrintHistogram
 	   aus dem Package testseries, um die Statistik auszugeben.
 	*/
-	n := len(rollResults)
-	fmt.Println("Statistik für", n, "Würfelwürfe:")
-	testseries.PrintDistribution(rollResults)
-	fmt.Println()
-
-	fmt.Println("Histogramm für", n, "Würfelwürfe:")
-	testseries.PrintHistogram(rollResults)
-	fmt.Println()
+	// TODO
 }
 
 // main kombiniert die anderen Funktionen zu einem Programm.
 func main() {
-	d, n := readUserInput()
-	results := dice.RollMany(d, n)
-	printDiceStatistics(results)
+	// TODO
 }

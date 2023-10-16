@@ -5,15 +5,11 @@ package testseries
 // entsprechende Wert der empirischen Verteilungsfunktion steht.
 func EmpiricalDistribution(relativeFreqs []float64) []float64 {
 	emp := make([]float64, len(relativeFreqs))
-	sum := 0.0
 	/* Hinweis:
 	   Verwenden Sie eine for-Schleife, um die relativen Häufigkeiten aufzusummieren.
 	   In jedem Schritt speichern Sie die bisherige Summe an Stelle i in der Liste emp.
 	*/
-	for i, f := range relativeFreqs {
-		sum += f
-		emp[i] = sum
-	}
+	// TODO
 	return emp
 }
 
