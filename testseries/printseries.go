@@ -19,7 +19,6 @@ func PrintDistribution(values []int) {
 	   die über die Werte der Messreihe iteriert.
 	   Beachten Sie dabei die Abstände zwischen den Spalten.
 	*/
-	// tag::solution[]
 	valrange := intlists.ValueRange(values)
 	absolute := AbsoluteFrequencies(values)
 	relative := RelativeFrequencies(absolute)
@@ -30,7 +29,6 @@ func PrintDistribution(values []int) {
 	for i, v := range valrange {
 		fmt.Printf("%d       %d     %.2f     %.2f\n", v, absolute[i], relative[i], emp[i])
 	}
-	// end::solution[]
 }
 
 // PrintHistogram erwartet eine Liste mit Ergebnissen einer Integer-Messreihe.
@@ -44,7 +42,6 @@ func PrintHistogram(values []int) {
 	   über den Wertebereich iterieren und in jeder Iteration
 	   die entsprechende Anzahl an Sternchen ausgeben.
 	*/
-	// tag::solution[]
 	valrange := intlists.ValueRange(values)
 	absolute := AbsoluteFrequencies(values)
 
@@ -55,5 +52,4 @@ func PrintHistogram(values []int) {
 		}
 		fmt.Println()
 	}
-	// end::solution[]
 }

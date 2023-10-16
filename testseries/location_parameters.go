@@ -64,7 +64,6 @@ func Mode(values []int) int {
 	   Suchen Sie dann nach dessen Position in der Liste der absoluten Häufigkeiten.
 	*/
 
-	// tag::solution[]
 	// Bestimme den kleinsten Wert in der Liste der Werte.
 	minvalue := intlists.Min(values)
 
@@ -81,7 +80,6 @@ func Mode(values []int) int {
 			break
 		}
 	}
-	// end::solution[]
 	return maxpos
 }
 
@@ -99,13 +97,10 @@ func GeometricMean(values []int) float64 {
 	   Verwenden Sie die Funktion Product aus dem Paket intlists.
 	   Verwenden Sie die Funktion Pow aus dem Paket math.
 	*/
-	// tag::solution[]
 	product := float64(intlists.Product(values))
 	length := float64(len(values))
 
 	return math.Pow(product, 1.0/length)
-	// end::solution[]
-	// taskreturn: 0.0
 }
 
 // HarmonicMean erwartet eine Liste mit ganzzahligen Werten.

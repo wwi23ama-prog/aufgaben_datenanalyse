@@ -17,7 +17,6 @@ func readUserInput() (int, int) {
 
 	   Speichern Sie die Eingaben in den Variablen n und d.
 	*/
-	// tag::solution[]
 	fmt.Println("Würfelwurf-Simulator")
 	fmt.Println("====================")
 	fmt.Println()
@@ -29,7 +28,6 @@ func readUserInput() (int, int) {
 	fmt.Scanln(&d)
 
 	fmt.Println()
-	// end::solution[]
 	return d, n
 }
 
@@ -39,7 +37,6 @@ func printDiceStatistics(rollResults []int) {
 	   Verwenden Sie die Funktionen PrintDistribution und PrintHistogram
 	   aus dem Package testseries, um die Statistik auszugeben.
 	*/
-	// tag::solution[]
 	n := len(rollResults)
 	fmt.Println("Statistik für", n, "Würfelwürfe:")
 	testseries.PrintDistribution(rollResults)
@@ -48,14 +45,11 @@ func printDiceStatistics(rollResults []int) {
 	fmt.Println("Histogramm für", n, "Würfelwürfe:")
 	testseries.PrintHistogram(rollResults)
 	fmt.Println()
-	// end::solution[]
 }
 
 // main kombiniert die anderen Funktionen zu einem Programm.
 func main() {
-	// tag::solution[]
 	d, n := readUserInput()
 	results := dice.RollMany(d, n)
 	printDiceStatistics(results)
-	// end::solution[]
 }

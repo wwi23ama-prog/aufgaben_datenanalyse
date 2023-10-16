@@ -7,10 +7,7 @@ func RollSingleDieOnce() int {
 	/* Hinweis:
 	   Verwenden Sie die Funktion Intn aus dem Package math/rand.
 	*/
-	// tag::solution[]
 	return rand.Intn(6) + 1
-	// end::solution[]
-	// taskreturn: return 0
 }
 
 // RollMultipleDiceOnce simuliert das einmalige Würfeln von zwei Würfeln.
@@ -21,11 +18,9 @@ func RollMultipleDiceOnce(d int) int {
 	   Schreiben Sie eine Schleife, die d mal die Funktion RollSingleDieOnce
 	   aufruft und die Ergebnisse aufsummiert.
 	*/
-	// tag::solution[]
 	for i := 0; i < d; i++ {
 		sum += RollSingleDieOnce()
 	}
-	// end::solution[]
 	return sum
 }
 
@@ -38,11 +33,9 @@ func RollMany(d, n int) []int {
 	   Schreiben Sie eine Schleife, die n mal die Funktion RollMultipleDiceOnce
 	   aufruft und die Ergebnisse in der Liste rollResults speichert.
 	*/
-	// tag::solution[]
 	for i := 0; i < n; i++ {
 		rollResults[i] = RollMultipleDiceOnce(d)
 	}
-	// end::solution[]
 	return rollResults
 }
 

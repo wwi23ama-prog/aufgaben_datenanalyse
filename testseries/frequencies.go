@@ -18,15 +18,12 @@ func AbsoluteFrequencies(values []int) []int {
 	   Eine Liste mit der richtigen Länge können Sie mit make erzeugen:
 	   freq := make([]int, 5) erzeugt eine Liste mit 5 Elementen.
 	*/
-	// tag::solution[]
 	min, max := intlists.Min(values), intlists.Max(values)
 	freq := make([]int, max-min+1)
 	for _, v := range values {
 		freq[v-min] += 1
 	}
 	return freq
-	// end::solution[]
-	// taskreturn: []int{}
 }
 
 // RelativeFrequencies erwartet eine Liste mit absoluten Häufigkeiten einer ganzzahligen Messreihe.
@@ -39,11 +36,9 @@ func RelativeFrequencies(values []int) []float64 {
 	   indem Sie in einer Schleife über die Werte iterieren
 	   und in jedem Schleifendurchlauf den Wert durch die Summe teilen.
 	*/
-	// tag::solution[]
 	sum := float64(intlists.Sum(values))
 	for i, r := range values {
 		freq[i] = float64(r) / sum
 	}
-	// end::solution[]
 	return freq
 }

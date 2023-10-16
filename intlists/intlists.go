@@ -8,13 +8,11 @@ func Min(values []int) int {
 	   Verwenden Sie eine for-Schleife, um das Minimum zu berechnen.
 	   Jedes Mal, wenn Sie ein neues Minimum finden, speichern Sie es in der Variablen min.
 	*/
-	// tag::solution[]
 	for _, v := range values {
 		if v < min {
 			min = v
 		}
 	}
-	// end::solution[]
 	return min
 }
 
@@ -25,13 +23,11 @@ func Max(values []int) int {
 	/* Hinweis:
 	   Gehen Sie analog zu Min vor.
 	*/
-	// tag::solution[]
 	for _, v := range values {
 		if v > max {
 			max = v
 		}
 	}
-	// end::solution[]
 	return max
 }
 
@@ -46,12 +42,10 @@ func ValueRange(values []int) []int {
 	   Fügen Sie dann in einer Schleife alle Zahlen zwischen
 	   Minimum und Maximum zu result hinzu.
 	*/
-	// tag::solution[]
 	min, max := Min(values), Max(values)
 	for i := min; i <= max; i++ {
 		result = append(result, i)
 	}
-	// end::solution[]
 	return result
 
 }
@@ -64,11 +58,9 @@ func Sum(values []int) int {
 	   Verwenden Sie eine for-Schleife, um die Summe zu berechnen.
 	   Addieren Sie in jedem Schleifendurchlauf den aktuellen Wert zur Summe.
 	*/
-	// tag::solution[]
 	for _, v := range values {
 		sum += v
 	}
-	// end::solution[]
 	return sum
 }
 
@@ -79,10 +71,8 @@ func Product(values []int) int {
 	/* Hinweis:
 	   Gehen Sie analog zu Sum vor.
 	*/
-	// tag::solution[]
 	for _, v := range values {
 		product *= v
 	}
-	// end::solution[]
 	return product
 }
